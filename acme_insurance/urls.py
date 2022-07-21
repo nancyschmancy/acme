@@ -4,8 +4,8 @@ from rest_framework.routers import DefaultRouter
 
 
 router = DefaultRouter()
-router.register('quote', QuoteModelViewSet)
+router.register('quote', QuoteModelViewSet, basename='quote')
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 ]

@@ -22,12 +22,6 @@ class QuoteSerializer(serializers.ModelSerializer):
         read_only_fields = ('id', 'base_premium', 'cancelled_fee', 'volcano_fee', 'not_cancelled_discount',
                             'ownership_discount')
 
-    def validate_effective_date(self, value):
-        """ Check that request date is not in the past """
-        # is this needed?
-
-        return value
-
     def validate_zip_code(self, value):
         """ Checks that zip code follows the format XXXXX or XXXXX-XXXX """
 
